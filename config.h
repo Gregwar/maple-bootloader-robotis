@@ -35,8 +35,8 @@
 
 #include "common.h"
 
-#define LED_BANK GPIOA
-#define LED      5
+#define LED_BANK GPIOB
+#define LED      2
 #define BLINK_FAST 0x50000
 #define BLINK_SLOW 0x100000
 

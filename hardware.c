@@ -52,18 +52,18 @@ bool readPin(u32 bank, u8 pin) {
 }
 
 void strobePin(u32 bank, u8 pin, u8 count, u32 rate) {
-    resetPin(bank, pin);
+    setPin(bank, pin);
 
     u32 c;
     while (count-- > 0) {
         for (c = rate; c > 0; c--) {
             asm volatile("nop");
         }
-        setPin(bank, pin);
+        resetPin(bank, pin);
         for (c = rate; c > 0; c--) {
             asm volatile("nop");
         }
-        resetPin(bank, pin);
+        setPin(bank, pin);
     }
 }
 
@@ -101,18 +101,18 @@ void setupLED(void) {
 
     /* Setup APB2 (GPIOA) */
     rwmVal =  GET_REG(RCC_APB2ENR);
-    rwmVal |= 0x00000004;
+    rwmVal |= 0x00000008;
     SET_REG(RCC_APB2ENR, rwmVal);
 
     /* Setup GPIOA Pin 5 as PP Out */
-    SET_REG(GPIO_CRL(GPIOA), 0x00100000);
+    SET_REG(GPIO_CRL(LED_BANK), 1<<LED);
 
-    rwmVal =  GET_REG(GPIO_CRL(GPIOA));
-    rwmVal &= 0xFF0FFFFF;
-    rwmVal |= 0x00100000;
-    SET_REG(GPIO_CRL(GPIOA), rwmVal);
+    rwmVal =  GET_REG(GPIO_CRL(LED_BANK));
+    rwmVal &= 0xFFFFF0FF;
+    rwmVal |= 0x00000100;
+    SET_REG(GPIO_CRL(LED_BANK), rwmVal);
 
-    setPin(GPIOA, 5);
+    setPin(LED_BANK, LED);
 }
 
 void setupBUTTON(void) {
@@ -166,7 +166,7 @@ void jumpToUser(u32 usrAddr) {
     flashLock();
     usbDsbISR();
     nvicDisableInterrupts();
-    setPin(GPIOC, 12); // disconnect usb from host. todo, macroize pin
+    setPin(GPIOC, 13); // disconnect usb from host. todo, macroize pin
     systemReset(); // resets clocks and periphs, not core regs
 
 
