@@ -8,9 +8,13 @@ Robotis CM900 and OpenCM9.04 boards:
 
 ## CM900
 
+![CM900](imgs/cm900.jpg)
+
 The `master` branch of this repository is supporting CM900 board, you can find a
 snapshot of the bootloader in `snapshot/cm900.bin`.
 
 ## OpenCM9.04
+
+![OpenCM9.04](imgs/opencm9.04.jpg)
 
 This variant is coming soon
