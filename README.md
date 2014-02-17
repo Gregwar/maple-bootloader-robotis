@@ -1,7 +1,10 @@
 # Maple Bootloader for Robotis boards
 
 This is an adaptation of the maple bootloader in order to make it work with the
-Robotis CM900 and OpenCM9.04 boards.
+Robotis CM900 and OpenCM9.04 boards:
+
+* [Robotis CM900](http://support.robotis.com/en/product/auxdevice/controller/cm-900_manual.htm)
+* [Robotis OpenCM9.04](http://support.robotis.com/en/product/auxdevice/controller/opencm9.04.htm)
 
 ## CM900
 
