@@ -10,7 +10,7 @@ Robotis CM900 and OpenCM9.04 boards:
 
 ### Step 1. build or get the right bootloader
 
-You can either build it or get it (from the `snapshot` directory).
+You can either build it or get it (from the `snapshot` directory). See below.
 
 ### Step 2. wire a serial line to your board
 
@@ -45,14 +45,16 @@ Makefile.
 Here is a repository forking the libmaple and adding a `cm900` and `opencm904` board to it:
 [RobotsWar libmaple (including robotis boards)](https://github.com/RobotsWar/libmaple)
 
-## CM900
+## Boards
+
+### CM900
 
 ![CM900](imgs/cm900.jpg)
 
 The `master` branch of this repository is supporting CM900 board, you can find a
 snapshot of the bootloader in `snapshot/maple-boot-cm900.bin`.
 
-## OpenCM9.04
+### OpenCM9.04
 
 ![OpenCM9.04](imgs/opencm9.04.jpg)
 
