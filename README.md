@@ -8,11 +8,11 @@ Robotis CM900 and OpenCM9.04 boards:
 
 ## How to install it?
 
-### Step 1. build or get the right bootloader
+### Step 1. Build or get the right bootloader
 
 You can either build it or get it (from the `snapshot` directory). See below.
 
-### Step 2. wire a serial line to your board
+### Step 2. Wire a serial line to your board
 
 This step may require some soldering or electronic hacking, you'll have to wire up a serial 3.3V 
 adapter. You can for instance use a [3.3V FTDI cable](http://www.ftdichip.com/Products/Cables/USBTTLSerial.htm)
