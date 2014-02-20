@@ -24,7 +24,7 @@ Then, wire your serial adapter to the Serial1 (TX1 and RX1) pins of your board.
 ### Step 3. Put your board in hardware bootloader mode
 
 Press the RESET button of your board, and then put the BOOT0 signal to 3.3V (this can be done
-with an extra wire) and release the RESET button.
+with an extra wire), release the RESET button, and release the BOOT0.
 
 ### Step 4. Flash the bootloader!
 
