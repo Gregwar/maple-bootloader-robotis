@@ -43,7 +43,7 @@ Next, you can program your board using `dfu-util`. This is done by default in th
 Makefile.
 
 Here is a repository forking the libmaple and adding a `cm900` and `opencm904` board to it:
-[RobotsWar libmaple (including robotis boards](https://github.com/RobotsWar/libmaple)
+[RobotsWar libmaple (including robotis boards)](https://github.com/RobotsWar/libmaple)
 
 ## CM900
 
