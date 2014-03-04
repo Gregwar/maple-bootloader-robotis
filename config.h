@@ -36,12 +36,12 @@
 #include "common.h"
 
 #define LED_BANK GPIOB
-#define LED      2
+#define LED      9
 #define BLINK_FAST 0x50000
 #define BLINK_SLOW 0x100000
 
 #define BUTTON_BANK GPIOC
-#define BUTTON      9
+#define BUTTON      15
 
 #define STARTUP_BLINKS 5
 #define BOOTLOADER_WAIT 6
