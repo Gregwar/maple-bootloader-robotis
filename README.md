@@ -58,4 +58,5 @@ snapshot of the bootloader in `snapshot/maple-boot-cm900.bin`.
 
 ![OpenCM9.04](imgs/opencm9.04.jpg)
 
-This variant is coming soon
+Ths `opencm904` branch of this repository is supporting the OpenCM9.04 board. You can
+find a snapshot of this bootloader in `snapshot/maple-boot-opencm904.bin`.
