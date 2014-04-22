@@ -8,11 +8,27 @@ Robotis CM900 and OpenCM9.04 boards:
 
 ## How to install it?
 
-### Step 1. Build or get the right bootloader
+### The easy way
+
+#### OpenCM9.04
+
+The easy way is to use a simple sketch with the robotis OpenCM Framework to do it. Simply run
+OpenCM IDE and open the `opencm904_maple_loader` sketch that is in the `sketch/` directory of
+this repository.
+
+**If you load that sketch, it will rewrite your bootloader to the OpenCM9.04 bootloader;
+OpenCM IDE won't work anymore!**
+
+Wait until your board led blinks, and your bootloader should be changed. You can press the reset
+button and you should see the "bootloader blink".
+
+### The standard way
+
+#### Step 1. Build or get the right bootloader
 
 You can either build it or get it (from the `snapshot` directory). See below.
 
-### Step 2. Wire a serial line to your board
+#### Step 2. Wire a serial line to your board
 
 This step may require some soldering or electronic hacking, you'll have to wire up a serial 3.3V 
 adapter. You can for instance use a [3.3V FTDI cable](http://www.ftdichip.com/Products/Cables/USBTTLSerial.htm)
@@ -21,12 +37,12 @@ work with this.
 
 Then, wire your serial adapter to the Serial1 (TX1 and RX1) pins of your board.
 
-### Step 3. Put your board in hardware bootloader mode
+#### Step 3. Put your board in hardware bootloader mode
 
 Press the RESET button of your board, and then put the BOOT0 signal to 3.3V (this can be done
 with an extra wire), release the RESET button, and release the BOOT0.
 
-### Step 4. Flash the bootloader!
+#### Step 4. Flash the bootloader!
 
 You can now flash the bootloader:
 
@@ -37,13 +53,14 @@ python stm32loader.py -p /dev/ttyUSB -evw bootloader.bin
 
 Tada! It should then be OK.
 
-### Step 5. What's next?
+### What's next?
 
 Next, you can program your board using `dfu-util`. This is done by default in the libmaple
 Makefile.
 
-Here is a repository forking the libmaple and adding a `cm900` and `opencm904` board to it:
-[RobotsWar libmaple (including robotis boards)](https://github.com/RobotsWar/libmaple)
+You can now use `cm900` and `opencm904` variants in the LibMaple, or use the RobotsWar 
+framework
+https://github.com/RobotsWar/RobotsWar
 
 ## Boards
 
